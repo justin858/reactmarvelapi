@@ -4,12 +4,12 @@ import * as apiconfig from '../config/apiconfig';
 
 
 export let findAll = () => {
-  return request({url:"http://gateway.marvel.com/v1/public/characters?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf"})
+  return request({url:"https://gateway.marvel.com/v1/public/characters?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf"})
         .then(data => data = JSON.parse(data))
 }
 
 export let findOne = (path) => {
-  var baseURL = 'http://gateway.marvel.com/v1/public';
+  var baseURL = 'https://gateway.marvel.com/v1/public';
   var publickey = '69b7c259e097f3089ff365f0714a8b1d';
   var privatekey = '1241b6fa59d25e8573c02e94ec17531e4a849cb5';
   var timestamp = Date.now();
@@ -21,6 +21,6 @@ export let findOne = (path) => {
 }
 
 export let findAllComics = () => {
-  return request({url:"http://gateway.marvel.com/v1/public/comics?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf"})
+  return request({url:"https://gateway.marvel.com/v1/public/comics?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf"})
         .then(data => data = JSON.parse(data))
 }
