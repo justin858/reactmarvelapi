@@ -25604,13 +25604,13 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var findAll = exports.findAll = function findAll() {
-	  return (0, _request2.default)({ url: "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf" }).then(function (data) {
+	  return (0, _request2.default)({ url: "https://gateway.marvel.com/v1/public/characters?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf" }).then(function (data) {
 	    return data = JSON.parse(data);
 	  });
 	};
 
 	var findOne = exports.findOne = function findOne(path) {
-	  var baseURL = 'http://gateway.marvel.com/v1/public';
+	  var baseURL = 'https://gateway.marvel.com/v1/public';
 	  var publickey = '69b7c259e097f3089ff365f0714a8b1d';
 	  var privatekey = '1241b6fa59d25e8573c02e94ec17531e4a849cb5';
 	  var timestamp = Date.now();
@@ -25623,7 +25623,7 @@
 	};
 
 	var findAllComics = exports.findAllComics = function findAllComics() {
-	  return (0, _request2.default)({ url: "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf" }).then(function (data) {
+	  return (0, _request2.default)({ url: "https://gateway.marvel.com/v1/public/comics?ts=1&apikey=69b7c259e097f3089ff365f0714a8b1d&hash=382a4c7093c4c26710be485ea30dffaf" }).then(function (data) {
 	    return data = JSON.parse(data);
 	  });
 	};
