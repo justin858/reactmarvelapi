@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "webpack --config ./webpack.config.js --progress --colors",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "webpack-dev-server --inline --content-base . --history-api-fallback",
+    "start:prod": "webpack && node server.js"
   },
   "author": "",
   "license": "ISC",
